@@ -201,7 +201,7 @@ void setup()
 	if (settings.CAN0_Enabled)
 	{
         Serial.println("Init CAN0");
-		Can0.begin(settings.CAN0Speed);
+        Can0.begin(settings.CAN0Speed, {}, 1, 1);
         if (SysSettings.CAN0EnablePin < 255) 
         {
             pinMode(SysSettings.CAN0EnablePin, OUTPUT);
